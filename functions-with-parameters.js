@@ -17,6 +17,11 @@ console.log(result);
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
 
+function greeter(name) {
+  return "Hoi " + name + "!";
+}
+const greetings = greeter("Savannah");
+console.log(greetings);
 
 
 /* Opdracht 2 */
@@ -26,6 +31,12 @@ console.log(result);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(minutes) {
+  return minutes * 60;
+}
+
+const seconds = minutesToSeconds(23);
+console.log(seconds);
 
 
 /* Opdracht 3 */
@@ -35,7 +46,12 @@ console.log(result);
 // merge("abra", "cadabra") geeft "abracadabra"
 // merge("zoet", "sappig") geeft "zoetsappig"
 
+function merge(string1, string2) {
+  return string1 + string2;
+}
 
+const mergedString = merge("abra","cadabra");
+console.log(mergedString);
 
 
 /* Opdracht  4 */
@@ -44,6 +60,13 @@ console.log(result);
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
 
+function calculateDogYears(dogAge) {
+  humanAge = dogAge * 7;
+  return "Jouw hond is " + humanAge + " jaar oud in mensenjaren."
+}
+
+const newAge = calculateDogYears(15);
+console.log(newAge);
 
 
 /* Opdracht 5 */
@@ -54,7 +77,12 @@ console.log(result);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
+function wrapper(string, char) {
+  return char + string + char;
+}
 
+const wrapped = wrapper("bliep","_");
+console.log(wrapped);
 
 /* Bonus opdracht  */
 // Schrijf een functie genaamd createDetailString, die een object met de properties firstName, lastName en profession verwacht en een zin teruggeeft
@@ -62,4 +90,15 @@ console.log(result);
 // createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'}) geeft "Het beroep vam Jan Jansen is docent."
 // createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'}) geeft "Het beroep vam Kees Klaasen is brandweerman."
 
+function createDetailString({ firstName, lastName, profession}) {
+  return "Het beroep van " + firstName + " " + lastName + " is " + profession;
+}
 
+const sav = {
+  firstName: "Savannah",
+  lastName: "Simonis",
+  profession: "ECM consultant"
+}
+
+const zinnetje = createDetailString(sav);
+console.log(zinnetje);
